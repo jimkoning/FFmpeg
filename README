@@ -16,3 +16,11 @@ FFmpeg README
 --------------------
 
 * See the INSTALL file.
+
+4) ffplay
+---------
+ffplay requires sdl, install sdl using brew install sdl before running configure.sh
+
+http://www.libsdl.org/
+
+
