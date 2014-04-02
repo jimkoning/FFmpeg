@@ -7,8 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		EDEF186918EC8AFF003E8AAE /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EDEF186818EC8AFF003E8AAE /* main.cpp */; };
-		EDEF186B18EC8AFF003E8AAE /* ffplay_xcode.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = EDEF186A18EC8AFF003E8AAE /* ffplay_xcode.1 */; };
+		EDEF187418EC8B2D003E8AAE /* cmdutils_opencl.c in Sources */ = {isa = PBXBuildFile; fileRef = EDEF187118EC8B2D003E8AAE /* cmdutils_opencl.c */; };
+		EDEF187518EC8B2D003E8AAE /* cmdutils.c in Sources */ = {isa = PBXBuildFile; fileRef = EDEF187218EC8B2D003E8AAE /* cmdutils.c */; };
+		EDEF187618EC8B2D003E8AAE /* ffplay.c in Sources */ = {isa = PBXBuildFile; fileRef = EDEF187318EC8B2D003E8AAE /* ffplay.c */; };
+		EDEF187B18EC8B48003E8AAE /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDEF187818EC8B48003E8AAE /* CoreFoundation.framework */; };
+		EDEF187C18EC8B48003E8AAE /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDEF187918EC8B48003E8AAE /* Cocoa.framework */; };
+		EDEF187D18EC8B48003E8AAE /* OpenCL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDEF187A18EC8B48003E8AAE /* OpenCL.framework */; };
+		EDEF188818EC8B5A003E8AAE /* libSDLmain.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EDEF187F18EC8B5A003E8AAE /* libSDLmain.a */; };
+		EDEF188918EC8B5A003E8AAE /* libavformat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EDEF188018EC8B5A003E8AAE /* libavformat.a */; };
+		EDEF188A18EC8B5A003E8AAE /* libavfilter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EDEF188118EC8B5A003E8AAE /* libavfilter.a */; };
+		EDEF188B18EC8B5A003E8AAE /* libavdevice.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EDEF188218EC8B5A003E8AAE /* libavdevice.a */; };
+		EDEF188C18EC8B5A003E8AAE /* libavcodec.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EDEF188318EC8B5A003E8AAE /* libavcodec.a */; };
+		EDEF188D18EC8B5A003E8AAE /* libavutil.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EDEF188418EC8B5A003E8AAE /* libavutil.a */; };
+		EDEF188E18EC8B5A003E8AAE /* libSDL.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EDEF188518EC8B5A003E8AAE /* libSDL.a */; };
+		EDEF188F18EC8B5A003E8AAE /* libswscale.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EDEF188618EC8B5A003E8AAE /* libswscale.a */; };
+		EDEF189018EC8B5A003E8AAE /* libswresample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EDEF188718EC8B5A003E8AAE /* libswresample.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -18,7 +31,6 @@
 			dstPath = /usr/share/man/man1/;
 			dstSubfolderSpec = 0;
 			files = (
-				EDEF186B18EC8AFF003E8AAE /* ffplay_xcode.1 in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
@@ -26,8 +38,21 @@
 
 /* Begin PBXFileReference section */
 		EDEF186518EC8AFF003E8AAE /* ffplay-xcode */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "ffplay-xcode"; sourceTree = BUILT_PRODUCTS_DIR; };
-		EDEF186818EC8AFF003E8AAE /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		EDEF186A18EC8AFF003E8AAE /* ffplay_xcode.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = ffplay_xcode.1; sourceTree = "<group>"; };
+		EDEF187118EC8B2D003E8AAE /* cmdutils_opencl.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = cmdutils_opencl.c; path = ../../../cmdutils_opencl.c; sourceTree = "<group>"; };
+		EDEF187218EC8B2D003E8AAE /* cmdutils.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = cmdutils.c; path = ../../../cmdutils.c; sourceTree = "<group>"; };
+		EDEF187318EC8B2D003E8AAE /* ffplay.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = ffplay.c; path = ../../../ffplay.c; sourceTree = "<group>"; };
+		EDEF187818EC8B48003E8AAE /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		EDEF187918EC8B48003E8AAE /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		EDEF187A18EC8B48003E8AAE /* OpenCL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenCL.framework; path = System/Library/Frameworks/OpenCL.framework; sourceTree = SDKROOT; };
+		EDEF187F18EC8B5A003E8AAE /* libSDLmain.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSDLmain.a; path = /usr/local/Cellar/sdl/1.2.15/lib/libSDLmain.a; sourceTree = "<absolute>"; };
+		EDEF188018EC8B5A003E8AAE /* libavformat.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libavformat.a; path = ../../libavformat/libavformat.a; sourceTree = "<group>"; };
+		EDEF188118EC8B5A003E8AAE /* libavfilter.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libavfilter.a; path = ../../libavfilter/libavfilter.a; sourceTree = "<group>"; };
+		EDEF188218EC8B5A003E8AAE /* libavdevice.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libavdevice.a; path = ../../libavdevice/libavdevice.a; sourceTree = "<group>"; };
+		EDEF188318EC8B5A003E8AAE /* libavcodec.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libavcodec.a; path = ../../libavcodec/libavcodec.a; sourceTree = "<group>"; };
+		EDEF188418EC8B5A003E8AAE /* libavutil.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libavutil.a; path = ../../libavutil/libavutil.a; sourceTree = "<group>"; };
+		EDEF188518EC8B5A003E8AAE /* libSDL.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSDL.a; path = /usr/local/Cellar/sdl/1.2.15/lib/libSDL.a; sourceTree = "<absolute>"; };
+		EDEF188618EC8B5A003E8AAE /* libswscale.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libswscale.a; path = ../../libswscale/libswscale.a; sourceTree = "<group>"; };
+		EDEF188718EC8B5A003E8AAE /* libswresample.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libswresample.a; path = ../../libswresample/libswresample.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +60,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDEF188D18EC8B5A003E8AAE /* libavutil.a in Frameworks */,
+				EDEF188B18EC8B5A003E8AAE /* libavdevice.a in Frameworks */,
+				EDEF188F18EC8B5A003E8AAE /* libswscale.a in Frameworks */,
+				EDEF188A18EC8B5A003E8AAE /* libavfilter.a in Frameworks */,
+				EDEF189018EC8B5A003E8AAE /* libswresample.a in Frameworks */,
+				EDEF187C18EC8B48003E8AAE /* Cocoa.framework in Frameworks */,
+				EDEF187B18EC8B48003E8AAE /* CoreFoundation.framework in Frameworks */,
+				EDEF188818EC8B5A003E8AAE /* libSDLmain.a in Frameworks */,
+				EDEF188918EC8B5A003E8AAE /* libavformat.a in Frameworks */,
+				EDEF188E18EC8B5A003E8AAE /* libSDL.a in Frameworks */,
+				EDEF187D18EC8B48003E8AAE /* OpenCL.framework in Frameworks */,
+				EDEF188C18EC8B5A003E8AAE /* libavcodec.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +81,8 @@
 		EDEF185C18EC8AFF003E8AAE = {
 			isa = PBXGroup;
 			children = (
+				EDEF187E18EC8B4F003E8AAE /* libs */,
+				EDEF187718EC8B3A003E8AAE /* frameworks */,
 				EDEF186718EC8AFF003E8AAE /* ffplay-xcode */,
 				EDEF186618EC8AFF003E8AAE /* Products */,
 			);
@@ -60,10 +99,37 @@
 		EDEF186718EC8AFF003E8AAE /* ffplay-xcode */ = {
 			isa = PBXGroup;
 			children = (
-				EDEF186818EC8AFF003E8AAE /* main.cpp */,
-				EDEF186A18EC8AFF003E8AAE /* ffplay_xcode.1 */,
+				EDEF187118EC8B2D003E8AAE /* cmdutils_opencl.c */,
+				EDEF187218EC8B2D003E8AAE /* cmdutils.c */,
+				EDEF187318EC8B2D003E8AAE /* ffplay.c */,
 			);
 			path = "ffplay-xcode";
+			sourceTree = "<group>";
+		};
+		EDEF187718EC8B3A003E8AAE /* frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EDEF187818EC8B48003E8AAE /* CoreFoundation.framework */,
+				EDEF187918EC8B48003E8AAE /* Cocoa.framework */,
+				EDEF187A18EC8B48003E8AAE /* OpenCL.framework */,
+			);
+			name = frameworks;
+			sourceTree = "<group>";
+		};
+		EDEF187E18EC8B4F003E8AAE /* libs */ = {
+			isa = PBXGroup;
+			children = (
+				EDEF187F18EC8B5A003E8AAE /* libSDLmain.a */,
+				EDEF188018EC8B5A003E8AAE /* libavformat.a */,
+				EDEF188118EC8B5A003E8AAE /* libavfilter.a */,
+				EDEF188218EC8B5A003E8AAE /* libavdevice.a */,
+				EDEF188318EC8B5A003E8AAE /* libavcodec.a */,
+				EDEF188418EC8B5A003E8AAE /* libavutil.a */,
+				EDEF188518EC8B5A003E8AAE /* libSDL.a */,
+				EDEF188618EC8B5A003E8AAE /* libswscale.a */,
+				EDEF188718EC8B5A003E8AAE /* libswresample.a */,
+			);
+			name = libs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -117,7 +183,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EDEF186918EC8AFF003E8AAE /* main.cpp in Sources */,
+				EDEF187518EC8B2D003E8AAE /* cmdutils.c in Sources */,
+				EDEF187418EC8B2D003E8AAE /* cmdutils_opencl.c in Sources */,
+				EDEF187618EC8B2D003E8AAE /* ffplay.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,6 +265,34 @@
 		EDEF186F18EC8AFF003E8AAE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					../..,
+					/usr/local/include,
+					/usr/local/include/SDL,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					../../libavutil,
+					../../libavdevice,
+					../../libavcodec,
+					../../libavfilter,
+					../../libavformat,
+					../../libavresample,
+					../../libpostproc,
+					../../libswresample,
+					../../libswscale,
+					/usr/local/lib,
+				);
+				OTHER_LDFLAGS = (
+					"-lssl",
+					"-lcrypto",
+					"-lm",
+					"-lbz2",
+					"-lz",
+					"-liconv",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -204,6 +300,34 @@
 		EDEF187018EC8AFF003E8AAE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					../..,
+					/usr/local/include,
+					/usr/local/include/SDL,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					../../libavutil,
+					../../libavdevice,
+					../../libavcodec,
+					../../libavfilter,
+					../../libavformat,
+					../../libavresample,
+					../../libpostproc,
+					../../libswresample,
+					../../libswscale,
+					/usr/local/lib,
+				);
+				OTHER_LDFLAGS = (
+					"-lssl",
+					"-lcrypto",
+					"-lm",
+					"-lbz2",
+					"-lz",
+					"-liconv",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
