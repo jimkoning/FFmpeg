@@ -193,14 +193,14 @@ void show_help_children(const AVClass *class, int flags)
         printf("\n");
     }
 
-    while (child = av_opt_child_class_next(class, child))
+    while ((child = av_opt_child_class_next(class, child)))
         show_help_children(child, flags);
 }
 
 static const OptionDef *find_option(const OptionDef *po, const char *name)
 {
     const char *p = strchr(name, ':');
-    int len = p ? p - name : strlen(name);
+    int len = (int)(p ? p - name : strlen(name));
 
     while (po->name != NULL) {
         if (!strncmp(name, po->name, len) && strlen(po->name) == len)
@@ -449,7 +449,7 @@ int locate_option(int argc, char **argv, const OptionDef *options,
 
 static void dump_argument(const char *a)
 {
-    const unsigned char *p;
+    const char *p;
 
     for (p = a; *p; p++)
         if (!((*p >= '+' && *p <= ':') || (*p >= '@' && *p <= 'Z') ||
@@ -850,7 +850,7 @@ int opt_loglevel(void *optctx, const char *opt, const char *arg)
         }
     }
 
-    level = strtol(arg, &tail, 10);
+    level = (int)strtol(arg, &tail, 10);
     if (*tail) {
         av_log(NULL, AV_LOG_FATAL, "Invalid loglevel \"%s\". "
                "Possible levels are numbers or:\n", arg);
@@ -1539,7 +1539,7 @@ int show_colors(void *optctx, const char *opt, const char *arg)
 
     printf("%-32s #RRGGBB\n", "name");
 
-    for (i = 0; name = av_get_known_color_name(i, &rgb); i++)
+    for (i = 0; (name = av_get_known_color_name(i, &rgb)); i++)
         printf("%-32s #%02x%02x%02x\n", name, rgb[0], rgb[1], rgb[2]);
 
     return 0;
@@ -1825,7 +1825,7 @@ int cmdutils_read_file(const char *filename, char **bufptr, size_t *size)
         fclose(f);
         return AVERROR(ENOMEM);
     }
-    ret = fread(*bufptr, 1, *size, f);
+    ret = (int)fread(*bufptr, 1, *size, f);
     if (ret < *size) {
         av_free(*bufptr);
         if (ferror(f)) {
@@ -1930,7 +1930,7 @@ AVDictionary *filter_codec_opts(AVDictionary *opts, enum AVCodecID codec_id,
         break;
     }
 
-    while (t = av_dict_get(opts, "", t, AV_DICT_IGNORE_SUFFIX)) {
+    while ((t = av_dict_get(opts, "", t, AV_DICT_IGNORE_SUFFIX))) {
         char *p = strchr(t->key, ':');
 
         /* check stream specification in opt name */

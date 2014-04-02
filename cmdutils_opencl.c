@@ -115,7 +115,7 @@ do {                                                                           \
 static void fill_rand_int(int *data, int n)
 {
     int i;
-    srand(av_gettime());
+    srand((unsigned int)av_gettime());
     for (i = 0; i < n; i++)
         data[i] = rand();
 }
@@ -205,7 +205,7 @@ end:
 
 static int compare_ocl_device_desc(const void *a, const void *b)
 {
-    return ((OpenCLDeviceBenchmark*)a)->runtime - ((OpenCLDeviceBenchmark*)b)->runtime;
+    return (int)(((OpenCLDeviceBenchmark*)a)->runtime - ((OpenCLDeviceBenchmark*)b)->runtime);
 }
 
 int opt_opencl_bench(void *optctx, const char *opt, const char *arg)
